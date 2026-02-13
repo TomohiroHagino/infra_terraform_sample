@@ -12,7 +12,7 @@ RailsアプリケーションをAWS上で動かすためのインフラ構成を
 |-----|------|
 | Users → IGW → ALB → ECS | ユーザーからのリクエスト |
 | ECS → RDS | データベース接続 |
-| ECS → NAT GW → IGW → S3/ECR | ファイルアクセス / イメージ取得 |
+| ECS → VPC GW for S3 → S3/ECR | ファイルアクセス / イメージ取得 |
 | 開発者 → GitHub → ECR | CI/CDでイメージをpush |
 
 ## ファイル構成
